@@ -1,7 +1,7 @@
 SEO Validator API
 ============
 
-SEO Validator is a simple tool for validating SEO metrics. It returns the SEO metrics of a web page.
+SEO Validator is a simple tool for validating SEO metrics. It returns a list of issues that need to be fixed to improve the SEO metrics of a web page.
 
 ![Build Status](https://img.shields.io/badge/build-passing-green)
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
@@ -47,7 +47,7 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```
-query = {  "url": "https://ebay.com"}
+query = {  "url": "https://ebay.com" }
 ```
 
 ###### Simple Request
@@ -68,12 +68,13 @@ print(result)
   "error": null,
   "data": {
     "url": "https://ebay.com",
+    "passed": false,
+    "entries": 3,
     "output": [
-      "There are 378 <a> tag without rel attribute.",
-      "This HTML does not have <meta name=descriptions> in <head>",
-      "This HTML does not have <meta name=keywords> in <head>"
-    ],
-    "seoPassed": false
+      "There are 372 'a' tag without rel attribute.",
+      "This HTML does not have 'meta name=descriptions' in 'head'",
+      "This HTML does not have 'meta name=keywords' in 'head'"
+    ]
   }
 }
 ```
