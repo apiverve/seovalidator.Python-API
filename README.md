@@ -69,13 +69,15 @@ print(result)
   "data": {
     "url": "https://ebay.com",
     "passed": false,
-    "entries": 3,
+    "entries": 4,
     "output": [
-      "There are 372 'a' tag without rel attribute.",
+      "There are 15 'img' tag without alt attribute.",
+      "There are 362 'a' tag without rel attribute.",
       "This HTML does not have 'meta name=descriptions' in 'head'",
       "This HTML does not have 'meta name=keywords' in 'head'"
     ]
-  }
+  },
+  "code": 200
 }
 ```
 
